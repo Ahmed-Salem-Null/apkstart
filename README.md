@@ -7,14 +7,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D6.svg)](#)
 
-**Windows 上的安卓应用运行器 —— 让安卓应用像 Windows 原生软件一样被安装和使用。**
+An Android App Runner for Windows — Install and use Android apps just like native Windows software.
 
-- 🖱️ **双击 .apk 即安装**：注册 .apk 文件关联后，在资源管理器里双击 APK，自动解析 → 安装 → 生成桌面图标，全程无需打开任何模拟器界面。
-- 🧩 **每个应用一个桌面图标**：图标从 APK 内部离线提取并转为多尺寸 ICO，双击桌面图标 = 直接启动该应用，与打开一个原生 Windows 软件的体验一致。
-- 🪟 **应用就是一个窗口**：运行时以**带窗口**模式启动（无头模式下 Android 不出 VSYNC，应用进程活着但屏幕上是空的），ApkStart 把这块窗口改标题、换真实应用图标、按竖屏比例摆好位置，就是一个独立应用窗口；**全屏**铺满屏幕高度并居中，**窗口模式**可自由拖动缩放且按应用记忆尺寸。
-- 🔍 **能被 Windows 搜到**：安装后同时创建桌面 + 开始菜单（`程序\ApkStart\`）快捷方式，按应用名在开始菜单搜索即可直达，任务栏按应用分组。
-- 📁 **数据互通**：`%USERPROFILE%\ApkStartShared` ↔ 安卓内 `/sdcard/ApkStartShared` 持续双向同步，安卓应用存下的文件直接出现在本机。
-- 🪶 **极致轻量**：壳层本身零第三方依赖（连 ZIP / PNG / ICO / AXML 解析都是手写的），运行时按需拉起，空闲自动回收；也可以完全复用你机器上已有的安卓运行时，额外占用为零。
+🖱️ Install with a double-click: Once .apk file associations are registered, simply double-click an APK file in File Explorer. The system will automatically parse it, install it, and create a desktop shortcut—all without ever needing to open an emulator interface.
+🧩 Dedicated desktop shortcuts: Icons are extracted offline from the APK and converted into multi-size ICO files. Double-clicking a desktop shortcut launches the app directly, providing an experience identical to using native Windows software.
+🪟 Apps as standalone windows: When launched, apps run in a windowed mode. (In "headless" mode, Android typically doesn't generate a VSYNC signal, leaving the screen blank even if the app process is running; this tool intercepts the window, applies the correct title and app icon, and sets the aspect ratio for portrait orientation.) The window fills the screen height and is centered by default, but it can also be freely resized, moved, and will remember its dimensions for future use.
+🔍 Discoverable via Windows Search: Installation creates shortcuts on both the desktop and the Start Menu (under "Programs\ApkStart\"). You can launch apps by searching for their names in the Start Menu, and they are grouped by app in the taskbar.
+📁 Seamless data sharing: A two-way, continuous sync is maintained between `%USERPROFILE%\ApkStartShared` on Windows and `/sdcard/ApkStartShared` within the Android environment, allowing files saved by Android apps to appear directly on your local Windows system.
+🪶 Extremely lightweight: The shell itself has zero third-party dependencies—even the parsing logic for ZIP, PNG, ICO, and AXML formats is custom-written. It launches only when needed and releases resources when idle. Furthermore, it can fully utilize an existing Android runtime already present on your machine, resulting in zero additional overhead.
 
 ![主界面](docs/images/app.png)
 
