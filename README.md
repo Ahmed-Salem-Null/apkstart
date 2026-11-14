@@ -10,11 +10,17 @@
 An Android App Runner for Windows — Install and use Android apps just like native Windows software.
 
 🖱️ Install with a double-click: Once .apk file associations are registered, simply double-click an APK file in File Explorer. The system will automatically parse it, install it, and create a desktop shortcut—all without ever needing to open an emulator interface.
+
 🧩 Dedicated desktop shortcuts: Icons are extracted offline from the APK and converted into multi-size ICO files. Double-clicking a desktop shortcut launches the app directly, providing an experience identical to using native Windows software.
+
 🪟 Apps as standalone windows: When launched, apps run in a windowed mode. (In "headless" mode, Android typically doesn't generate a VSYNC signal, leaving the screen blank even if the app process is running; this tool intercepts the window, applies the correct title and app icon, and sets the aspect ratio for portrait orientation.) The window fills the screen height and is centered by default, but it can also be freely resized, moved, and will remember its dimensions for future use.
+
 🔍 Discoverable via Windows Search: Installation creates shortcuts on both the desktop and the Start Menu (under "Programs\ApkStart\"). You can launch apps by searching for their names in the Start Menu, and they are grouped by app in the taskbar.
+
 📁 Seamless data sharing: A two-way, continuous sync is maintained between `%USERPROFILE%\ApkStartShared` on Windows and `/sdcard/ApkStartShared` within the Android environment, allowing files saved by Android apps to appear directly on your local Windows system.
+
 🪶 Extremely lightweight: The shell itself has zero third-party dependencies—even the parsing logic for ZIP, PNG, ICO, and AXML formats is custom-written. It launches only when needed and releases resources when idle. Furthermore, it can fully utilize an existing Android runtime already present on your machine, resulting in zero additional overhead.
+
 
 ![主界面](docs/images/app.png)
 
